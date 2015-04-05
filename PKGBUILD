@@ -5,7 +5,7 @@
 
 pkgname=tvheadend-git-joschi127
 _gitname='tvheadend'
-pkgver=3.9fixed
+pkgver=3.4fixed
 pkgrel=1
 pkgdesc="TV streaming server for Linux"
 arch=('i686' 'x86_64')
@@ -22,7 +22,7 @@ install=tvheadend.install
 
 source=(#"git+https://github.com/tvheadend/tvheadend.git#commit=6cb8eaae8dc4d67c417067e6a5c3c7bff2d92a1c"
         #"git+https://github.com/tvheadend/tvheadend.git#tag=v3.9"
-        "git+https://github.com/joschi127/tvheadend.git#branch=joschi127/3.9fixed"
+        "git+https://github.com/joschi127/tvheadend.git#branch=joschi127/3.4fixed"
 	'tvheadend.service')
 
 md5sums=('SKIP'
