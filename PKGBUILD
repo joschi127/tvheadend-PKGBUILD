@@ -3,9 +3,9 @@
 # Maintainer: Benjamin Hedrich <kiwisauce (a) pagenotfound (dot) de>
 # Based on package hts-tvheadend-svn by azleifel <azleifel at googlemail dot com>
 
-pkgname=tvheadend-git
+pkgname=tvheadend-git-joschi127
 _gitname='tvheadend'
-pkgver=3529+gd91c02d
+pkgver=3.9fixed
 pkgrel=1
 pkgdesc="TV streaming server for Linux"
 arch=('i686' 'x86_64')
@@ -21,16 +21,17 @@ conflicts=('tvheadend' 'hts-tvheadend' 'hts-tvheadend-svn')
 install=tvheadend.install
 
 source=(#"git+https://github.com/tvheadend/tvheadend.git#commit=6cb8eaae8dc4d67c417067e6a5c3c7bff2d92a1c"
-        "git+https://github.com/tvheadend/tvheadend.git#tag=v3.9"
+        #"git+https://github.com/tvheadend/tvheadend.git#tag=v3.9"
+        "git+https://github.com/joschi127/tvheadend.git#branch=joschi127/3.9fixed"
 	'tvheadend.service')
 
 md5sums=('SKIP'
          'b546f4486f0d28bea13ad1fb676acb27')
 
-pkgver() {
-	cd ${_gitname}
-	echo $(git rev-list --count HEAD)+g$(git rev-parse --short HEAD)
-}
+#pkgver() {
+#	cd ${_gitname}
+#	echo $(git rev-list --count HEAD)+g$(git rev-parse --short HEAD)
+#}
 
 build() {
 	cd ${_gitname}
