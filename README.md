@@ -5,7 +5,7 @@
 
 Build with:
 
-    makepkg -c
+    makepkg -c -f
 
 Install with:
 
